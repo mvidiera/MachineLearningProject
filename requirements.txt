@@ -1,0 +1,8 @@
+pandas
+numpy
+seaborn
+-e .
+# I can directly run setup.py or make it automatically run with this file. to enable that
+# this will connect to setup.py. it should be only n requirements. That is, when i am running requirements I should consider -e .
+# if I am running setup.py directly(than this file) that file should ignore -e . 
+# to make this, go to setup.py and write condition to ignore -e . 
