@@ -50,4 +50,13 @@ def evaluate_models(X_train,y_train, X_test, y_test, models, param):
         raise CustomException(e, sys)
 
 
+#this function takes file_path and open it in read byte mode as the file is pickle forma(byte), then store in file_obj var
+# this object file_obj is then loaded using dill. (as pkl file is byte stream, dill is used to send python object across the network
+# as byte stream)
+    def load_obj(file_path):
+        try:
+            with open(file_path, "rb") as file_obj:
+                return dill.load(file_obj)
 
+        except Exception as e:
+            raise CustomException(e, sys)
